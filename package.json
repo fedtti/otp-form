@@ -1,0 +1,29 @@
+{
+  "name": "@fedtti/otp-form",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/fedtti/otp-form#readme",
+  "bugs": {
+    "url": "https://github.com/fedtti/otp-form/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedtti/otp-form.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --mode production",
+    "preview": "tsc && vite build && vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "vite": "npm:rolldown-vite@latest"
+  },
+  "private": true,
+  "type": "module"
+}
