@@ -19,6 +19,8 @@
     "preview": "tsc && vite build && vite preview"
   },
   "devDependencies": {
+    "@types/node": "^24.5.0",
+    "sass": "^1.92.1",
     "typescript": "^5.9.2"
   },
   "dependencies": {
