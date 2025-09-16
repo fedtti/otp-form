@@ -6,7 +6,7 @@ export default {
     outDir: 'dist',
     assetsDir: './',
     emptyOutDir: true,
-    rolldownOptions: {
+    rollupOptions: {
       input: {
         'assets/css/style': 'src/scss/style.scss',
         'assets/js/app': 'src/ts/app.ts',

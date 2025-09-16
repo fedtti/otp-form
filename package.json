@@ -24,7 +24,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "vite": "npm:rolldown-vite@latest"
+    "vite": "^7.1.5"
   },
   "private": true,
   "type": "module"
