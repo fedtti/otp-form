@@ -37,7 +37,7 @@ class OtpForm extends HTMLElement {
   }
 
   connectedCallback() {
-    const form: HTMLFormElement = this.shadowRoot!.querySelector('form')!;
+    const form: HTMLFormElement = this.shadowRoot!.querySelector('form#otp-form')!;
     form.addEventListener('submit', this.handleFormSubmit, false);
   }
 
@@ -53,7 +53,16 @@ class OtpForm extends HTMLElement {
 
   handleFormSubmit(event: Event) {
     event.preventDefault();
-    console.log('fired');
+    const otpValue: HTMLInputElement = this.querySelector('input#otp-value')!;
+    const inputs = this.querySelectorAll<HTMLInputElement>('input[type="text"]');
+    for (const input of inputs) {
+      if (!input.value) throw new Error('You must specify a number for each input.');
+      otpValue.value += input.value;
+      input.value = '';
+    }
+
+    console.log(otpValue.value);
+    otpValue.value = '';
   }
 }
 
