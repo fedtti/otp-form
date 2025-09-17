@@ -25,6 +25,7 @@ class OtpForm extends HTMLElement {
         <fieldset>
           <legend>${legend}</legend>
           ${digits}
+          <input id="otp-value" name="otp-value" type="hidden" inputmode="numeric" pattern="\d{${this.getAttribute('digits')}}" autocomplete="one-time-code" required>
         </fieldset>
         <button type="submit">Submit</button>
       </form>
@@ -35,7 +36,7 @@ class OtpForm extends HTMLElement {
   }
 
   get digits(): string {
-    if (!this.getAttribute('digits')) throw new Error('You must specify the number of required digits.');
+    if (!this.getAttribute('digits')) throw new Error('You must specify the number of required digits.'); //
     
     let inputs: string = '';
 
