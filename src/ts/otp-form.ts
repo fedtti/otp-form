@@ -10,27 +10,13 @@ class OtpForm extends HTMLElement {
     const digits: string = this.digits;
 
     otpFormContainer.innerHTML = `
-      <style>
-        div {
-
-        }
-
-        form {
-          margin: 0 auto;
-          text-align: center;
-        }
-
-        fieldset {
-          border: 0;
-        }
-      </style>
-      <form id="otp-form" action="${action}" method="${method}">
+      <form id="otp-form" class="flex flex-col items-center" action="${action}" method="${method}">
         <fieldset>
           <legend>${legend}</legend>
           ${digits}
           <input id="otp-value" name="otp-value" type="hidden" inputmode="numeric" pattern="\\d{${this.getAttribute('digits')}}" autocomplete="one-time-code" required>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button class="btn-primary" type="submit">Submit</button>
       </form>
     `;
     shadow.appendChild(otpFormContainer);
