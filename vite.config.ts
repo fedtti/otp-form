@@ -1,4 +1,5 @@
 import type { UserConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default {
   base: '/',
@@ -21,6 +22,9 @@ export default {
       ]
     },
   },
+  plugins: [
+    tailwindcss(),
+  ],
   preview: {
     open: true,
   }
