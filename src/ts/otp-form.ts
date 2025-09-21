@@ -98,18 +98,21 @@ class OtpForm extends HTMLElement {
       }
 
       button {
+        align-items: center;
         background-color: rgb(99, 102, 241);
         border: 0;
         border-radius: 0.8rem;
         color: white;
         cursor: pointer;
-        display: inline-flex;
+        display: flex;
         font-family: inherit;
         font-size: 1.4rem;
         font-weight: 500;
         height: 4rem;
         justify-content: center;
         line-height: 2rem;
+        margin: 0 auto;
+        max-width: 26.844rem;
         padding: 1rem 0;
         text-align: center;
         width: 100%;
